@@ -1,0 +1,27 @@
+Auto dungeon crawler
+
+player          2 or 3 enemies
+
+inventory (somehow... good lord)
+
+3 types of room
+    fighting
+    treasure
+    resting
+
+basic items
+
+floors make up the dungeon
+
+1- player starts in the 1st floor
+2- one of 3 type of room is chosen at random
+3- resolve the room action
+4- move the player down one level
+    increase enemy attack and health
+    increase item quality or item itself
+    change room type spawn percentage
+
+
+
+when player dies game asks if you want to continue.
+    if yes then reset things :)
