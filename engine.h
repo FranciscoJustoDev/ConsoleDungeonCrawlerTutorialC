@@ -8,8 +8,6 @@
 
 // settings
 #define INPUT_BUFFER_MAX 32
-#define LINE_TEXT "-----------------\n"
-
 #define NO_ITEM -1
 
 typedef enum {

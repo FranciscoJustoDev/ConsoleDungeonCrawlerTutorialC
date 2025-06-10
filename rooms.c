@@ -4,7 +4,16 @@ Room *create_room(int current_level){
     Room *new_room = malloc(sizeof(Room));
     new_room->enemies = NULL;
     new_room->enemies_len = 0;
-    new_room->type = rand() % 3;
+    int fight_roll = rand() % (100 + 2);
+    int rest_roll = rand() % (100 - (current_level - 2));
+    int treasure_roll = rand() % (100 - (current_level - 2));
+    if (fight_roll > rest_roll && fight_roll > treasure_roll){
+        new_room->type = ROOM_FIGHTING;
+    }else if(treasure_roll > rest_roll){
+        new_room->type = ROOM_TREASURE;
+    }else{
+        new_room->type = ROOM_RESTING;
+    }
 
     if(new_room->type == ROOM_FIGHTING){
         strcpy(new_room->name, "Arena");
